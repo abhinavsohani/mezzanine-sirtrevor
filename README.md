@@ -3,12 +3,12 @@ mezzanine-sirtrevor
 
 Replaces defualt rich text widget of [Mezzanine CMS] based on awesome [Sir Trevor editor]. I reused most of the code of [django-sirtrevor].
 
-** warning:-**
+warning:-
 ============
 not ready to use in prduciton. image upload is not yet implemented.
 Quick start
 =========
------------------------
+
 - Add `mezzanine_sirtrevor` to your INSTALLED_APPS setting like this::
 
     INSTALLED_APPS = (
@@ -16,10 +16,9 @@ Quick start
         'mezzanine_sirtrevor',
     )
 
-
- 
    - add  ``RICHTEXT_WIDGET_CLASS = "mezzanine_sirtrevor.widgets.SirTrevorWidget"``
    - add  ``RICHTEXT_FILTER = "mezzanine_sirtrevor.filters.json_html"``
+   
 -------
 **that's it. now you can see new editor in admin and inline editing area.**
 
