@@ -1,12 +1,15 @@
 mezzanine-sirtrevor
-===================
-Replaces defualt rich text widget wiht 
-Provides rich text widgets and filters for Mezzanine based on awesome `Sir Trevor editor`_. I reused most of the code of `django-sirtrevor`_.
+=========
 
+Replaces defualt rich text widget of [Mezzanine CMS] based on awesome [Sir Trevor editor]. I reused most of the code of [django-sirtrevor].
+
+** warning:-**
+============
+not ready to use in prduciton. image upload is not yet implemented.
 Quick start
------------
-
-1. Add `mezzanine_sirtrevor` to your INSTALLED_APPS setting like this::
+=========
+-----------------------
+- Add `mezzanine_sirtrevor` to your INSTALLED_APPS setting like this::
 
     INSTALLED_APPS = (
         ...
@@ -14,14 +17,16 @@ Quick start
     )
 
 
+ 
    - add  ``RICHTEXT_WIDGET_CLASS = "mezzanine_sirtrevor.widgets.SirTrevorWidget"``
    - add  ``RICHTEXT_FILTER = "mezzanine_sirtrevor.filters.json_html"``
-
+-------
+**that's it. now you can see new editor in admin and inline editing area.**
 
 Configuration
 -------------
 
-`Sir Trevor` has a few `configuration options`_. You can customize most of them 
+`Sir Trevor` has a few [configuration options]. You can customize most of them 
 project-wide in your ``settings.py`` or on a per-widget basis as ``kwargs`` for 
 ``SirTrevorWidget``.
 
@@ -48,8 +53,13 @@ project-wide in your ``settings.py`` or on a per-widget basis as ``kwargs`` for
     Specify which block types are required for validatation.
     Defaults to ``None``
 
-.. _Sir Trevor editor: http://madebymany.github.io/sir-trevor-js/
-.. _django-sirtrevor: https://github.com/philippbosch/django-sirtrevor
-.. _configuration options: http://madebymany.github.io/sir-trevor-js/docs.html#2	
-	
-	
+
+
+
+[Mezzanine CMS]:http://mezzanine.jupo.org/
+[Sir Trevor editor]:http://madebymany.github.io/sir-trevor-js/
+[django-sirtrevor]:https://github.com/philippbosch/django-sirtrevor
+[configuration options]:http://madebymany.github.io/sir-trevor-js/docs.html#2
+
+
+    
