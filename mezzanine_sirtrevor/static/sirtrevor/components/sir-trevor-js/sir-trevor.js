@@ -508,12 +508,16 @@
     var data = new FormData();
   
     data.append('attachment[name]', file.name);
-    data.append('attachment[file]', file);
+    data.append('Filedata', file);
+	data.append('folder', "upload");
     data.append('attachment[uid]', uid);
+	data.append('auth_user_id', 1);
+	
   
     block.resetMessages();
   
     var callbackSuccess = function(data){
+	console.log('Upload callback called');
       SirTrevor.log('Upload callback called');
       SirTrevor.EventBus.trigger("onUploadStop");
   
@@ -524,25 +528,41 @@
   
     var callbackError = function(jqXHR, status, errorThrown){
       SirTrevor.log('Upload callback error called');
+	   console.log('Upload callback error called');
       SirTrevor.EventBus.trigger("onUploadStop");
   
       if (!_.isUndefined(error) && _.isFunction(error)) {
         _.bind(error, block)(status);
       }
     };
-  
+  function getCookie(name) {
+             var cookieValue = null;
+             if (document.cookie && document.cookie != '') {
+                 var cookies = document.cookie.split(';');
+                 for (var i = 0; i < cookies.length; i++) {
+                     var cookie = jQuery.trim(cookies[i]);
+                     // Does this cookie string begin with the name we want?
+                 if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                     cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                     break;
+                 }
+             }
+         }
+         return cookieValue;
+         }
     var xhr = $.ajax({
       url: SirTrevor.DEFAULTS.uploadUrl,
       data: data,
       cache: false,
       contentType: false,
       processData: false,
-      dataType: 'json',
+      
+	  beforeSend: function(xhr){xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'));},
       type: 'POST'
     });
   
     block.addQueuedItem(uid, xhr);
-  
+    
     xhr.done(callbackSuccess)
        .fail(callbackError)
        .always(_.bind(block.removeQueuedItem, block, uid));
@@ -1252,6 +1272,7 @@
   
     setData: function(blockData) {
       SirTrevor.log("Setting data for block " + this.blockID);
+	  console.log("Setting data for block " + this.blockID + " data "+this.blockStorage.data+"  blk data  "+blockData);
       _.extend(this.blockStorage.data, blockData || {});
     },
   
@@ -1910,7 +1931,7 @@
   
     loadData: function(data){
       // Create our image tag
-      this.$editor.html($('<img>', { src: data.file.url }));
+      this.$editor.html($('<img>', { src: "../../static/media/"+data.url }));
     },
   
     onBlockRender: function(){
