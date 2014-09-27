@@ -3,7 +3,7 @@ from django.core.urlresolvers import reverse_lazy
 from appconf import AppConf
 
 
-class SirTrevorConf(AppConf):
+class MezzSirTrevorConf(AppConf):
     BLOCK_TYPES = ['Text', 'List', 'Quote', 'Image', 'Mezzimage', 'Video', 'Tweet', 'Heading']
     DEFAULT_TYPE = None
     BLOCK_LIMIT = 0
