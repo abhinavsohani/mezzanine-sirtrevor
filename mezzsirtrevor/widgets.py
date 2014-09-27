@@ -57,7 +57,7 @@ class SirTrevorWidget(forms.Textarea):
             'sirtrevor/components/underscore/underscore-min.js',
             'sirtrevor/components/Eventable/eventable.js',
             'sirtrevor/components/sir-trevor-js/sir-trevor.js',
-			'sirtrevor/components/sir-trevor-js/mezz-sir-trevor.js',
+	    'sirtrevor/sir-trevor-js/mezz-sir-trevor.js',
             'sirtrevor/init.js',
 			
 
@@ -65,8 +65,8 @@ class SirTrevorWidget(forms.Textarea):
         css = {
             'all': [
                 'sirtrevor/components/sir-trevor-js/sir-trevor.css',
-				'sirtrevor/components/sir-trevor-js/mezz-sir-trevor.css',
+		'sirtrevor/mezz-sir-trevor.css',
                 'sirtrevor/components/sir-trevor-js/sir-trevor-icons.css',
-				'mezzanine/css/smoothness/jquery-ui-1.9.1.custom.min.css',
+		'mezzanine/css/smoothness/jquery-ui-1.9.1.custom.min.css',
             ]
         }
