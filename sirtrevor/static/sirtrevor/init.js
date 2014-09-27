@@ -1,4 +1,4 @@
-jQuery(function($) {
+$(function() {
     $('.js-st-instance').each(function(i,el) {
         var $el = $(el),
             defaults = $el.data('sirtrevor-defaults'),

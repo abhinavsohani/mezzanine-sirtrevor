@@ -8,9 +8,9 @@ except ImportError:
     from setuptools import setup
 
 setup(
-    name='mezzanine-sirtrevor',
+    name='sirtrevor',
     version= '0.2.3',
-    packages=['mezzsirtrevor'],
+    packages=['sirtrevor'],
     include_package_data=True,
     license='MIT License',
     description='Sir Trevor editor for Mezzanine',
