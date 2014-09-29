@@ -8,16 +8,17 @@ except ImportError:
     from setuptools import setup
 
 setup(
-    name='mezzsirtrevor',
-    version= '0.2.3',
-    packages=['mezzsirtrevor'],
+    name='mezzanine-sirtrevor',
+    version= '0.0.1',
+    packages=['sirtrevor'],
     include_package_data=True,
     license='MIT License',
+	zip_safe=False,
     description='Sir Trevor editor for Mezzanine',
     long_description=open('README.rst', 'r').read(),
     url='https://github.com/thecodinghouse/mezzanine-sirtrevor',
     author='Abhinav Sohani',
-    author_email='hello@thecodinghouse.in',
+    author_email='thecodinghouse12@gmail.com',
     install_requires=['markdown2', 'django-appconf', 'django', 'six'],
     classifiers=[
         'Environment :: Web Environment',
