@@ -9,7 +9,7 @@ except ImportError:
 
 setup(
     name='mezzanine-sirtrevor',
-    version= '0.0.1',
+    version= '0.1.0',
     packages=['sirtrevor'],
     include_package_data=True,
     license='MIT License',
@@ -17,6 +17,7 @@ setup(
     description='Sir Trevor editor for Mezzanine',
     long_description=open('README.rst', 'r').read(),
     url='https://github.com/thecodinghouse/mezzanine-sirtrevor',
+	download_url = 'https://github.com/thecodinghouse/mezzanine-sirtrevor/tarball/v0.1.0',
     author='Abhinav Sohani',
     author_email='thecodinghouse12@gmail.com',
     install_requires=['markdown2', 'django-appconf', 'django', 'six'],
