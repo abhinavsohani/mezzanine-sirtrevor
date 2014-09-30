@@ -8,7 +8,7 @@ Quick start
 
 1. Install django-sirtrevor::
 
-    pip install django-sirtrevor
+    pip install mezzanine-sirtrevor
 
 2. Add ``sirtrevor`` to your INSTALLED_APPS setting like this::
 
