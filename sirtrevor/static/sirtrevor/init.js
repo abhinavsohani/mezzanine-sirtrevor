@@ -1,6 +1,6 @@
-$(function() {
-    $('.js-st-instance').each(function(i,el) {
-        var $el = $(el),
+jQuery(function() {
+    jQuery('.js-st-instance').each(function(i,el) {
+        var $el = jQuery(el),
             defaults = $el.data('sirtrevor-defaults'),
             conf = $el.data('sirtrevor-conf'),
             st,

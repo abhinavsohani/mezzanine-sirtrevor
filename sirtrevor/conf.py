@@ -4,7 +4,7 @@ from appconf import AppConf
 
 
 class SirTrevorConf(AppConf):
-    BLOCK_TYPES = ['Text', 'List', 'Quote', 'Image', 'Mezzimage', 'Video', 'Tweet', 'Heading']
+    BLOCK_TYPES = ['Text', 'List', 'Quote', 'Mezzimage', 'Video', 'Tweet', 'Heading']
     DEFAULT_TYPE = None
     BLOCK_LIMIT = 0
     BLOCK_TYPE_LIMITS = {}
