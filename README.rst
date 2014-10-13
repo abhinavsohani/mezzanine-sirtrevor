@@ -36,7 +36,7 @@ Quick start
 
 Limitation
 ------------
-"sirtrevor" should be the first app in your installed apps list because it overrides editable.js. If you have your custom theme app then unfortunate you need to merge your app with sirtrevor app.
+"sirtrevor" should be the first app in your installed apps list because it overrides editable.js. If you have your custom theme app then  you need to merge your app with sirtrevor app.
 
 
 Configuration
