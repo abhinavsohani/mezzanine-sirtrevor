@@ -1,28 +1,43 @@
 mezzanine-sirtrevor
 =========
 
-Provides awesome [Sir Trevor editor] for [Mezzanine CMS] based Most of the code is taken from [django-sirtrevor] and made the appropriate changes to incorporate media library with image upload.
+[Sir Trevor editor] for [Mezzanine CMS]. It replaces the default editor with [Sir Trevor editor] . The code is taken from [django-sirtrevor] and made the appropriate changes to work with mezzanine and incorporate media library with image upload.
 
 Quick start
 -----------
 
-1. Install django-sirtrevor::
+1. Install mezzanine-sirtrevor::
 
-    pip install mezzanine-sirtrevor
+    > pip install mezzanine-sirtrevor
 
 2. Add ``sirtrevor`` to your INSTALLED_APPS setting like this::
 
-    INSTALLED_APPS = (
-        ...
-        'sirtrevor',
-    )
+    > INSTALLED_APPS = (
+    >
+    >   'sirtrevor'.
+    >    .....
+    > )
 
-3. Add sir trevor urls::
+3. Add sirtrevor urls::
 
-    url(r'^sirtrevor/', include('sirtrevor.urls')),
+    > url(r'^sirtrevor/', include('sirtrevor.urls')),
+4. add below settings
    
+   > RICHTEXT_WIDGET_CLASS = "sirtrevor.widgets.SirTrevorWidget"
+   
+   > RICHTEXT_FILTERS = (
+     "sirtrevor.filters.json_html",
+)   
+
+
+
 -------
 **that's it. now you can see new editor in admin and inline editing area.**
+
+Limitation
+------------
+"sirtrevor" should be the first app in your installed apps list because it overrides editable.js. If you have your custom theme app then unfortunate you need to merge your app with sirtrevor app.
+
 
 Configuration
 -------------

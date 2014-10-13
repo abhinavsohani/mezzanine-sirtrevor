@@ -14,6 +14,6 @@
 .js-height-input{
 	width:50% !important;
 }
-.editable-form {padding:20px; /*background:#fffcc3; border:1px solid #000;
-    line-height:1em; border-radius:4px; min-width:350px;
-    box-shadow: 0 0 80px #222;*/}
+.editable-form {padding:20px; background:none; border:none;
+    line-height:none; border-radius:none; min-width:none;
+    box-shadow:none;}
